@@ -1,5 +1,14 @@
 # Git Test - 30 Minutes
 
+## IMPORTANT: Enable GitHub Actions First!
+
+After forking this repo:
+1. Go to **Actions** tab in YOUR fork
+2. Click **"I understand my workflows, go ahead and enable them"**
+3. Then start the test
+
+---
+
 ## Do This Pattern 15 Times
 
 ```bash
@@ -56,6 +65,18 @@ Example: docs: answer question 5
 
 ## Start
 
+**Step 1: Test that Actions work**
+```bash
+# Make a small change to verify Actions are enabled
+echo "Starting test" > test.txt
+git add test.txt
+git commit -m "chore: verify actions are enabled"
+git push origin main
+```
+
+Check the **Actions** tab - you should see the workflow run. If not, enable Actions (see top).
+
+**Step 2: Begin the test**
 ```bash
 mkdir answers
 git add answers/
