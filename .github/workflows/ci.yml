@@ -38,7 +38,7 @@ jobs:
     
     - name: Check Branch Count
       run: |
-        BRANCH_COUNT=$(git branch -a | grep -E "question-[0-9]+" | wc -l)
+        BRANCH_COUNT=$(git branch -a | grep -E "question[0-9]+" | wc -l)
         echo "Question branches found: $BRANCH_COUNT"
         if [ $BRANCH_COUNT -lt 15 ]; then
           echo "❌ FAIL: Need 15 question branches (found $BRANCH_COUNT)"
