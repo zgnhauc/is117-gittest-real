@@ -60,7 +60,7 @@ jobs:
     - name: Check Answer Files
       run: |
         for i in $(seq -f "%02g" 1 15); do
-          FILE="answers/question-$i.md"
+          FILE="answers/question$i.md"
           if [ ! -f "$FILE" ]; then
             echo "❌ FAIL: Missing $FILE"
             exit 1
