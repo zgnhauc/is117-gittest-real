@@ -30,7 +30,7 @@ jobs:
       run: |
         INVALID=$(git log --pretty=format:"%s" | grep -v -E "^(docs:|chore:|fix:)" || true)
         if [ ! -z "$INVALID" ]; then
-          echo "❌ FAIL: Some commits don't start with docs:, chore:, or fix:"
+          echo "❌ FAIL: Some commits don't start with doc:, chore:, or fix:"
           echo "$INVALID"
           exit 1
         fi
