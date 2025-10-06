@@ -28,7 +28,7 @@ jobs:
     
     - name: Check Commit Messages
       run: |
-        INVALID=$(git log --pretty=format:"%s" | grep -v -E "^(docs:|chore:|fix:)" || true)
+        INVALID=$(git log --pretty=format:"%s" | grep -v -E "^(doc:|chore:|fix:)" || true)
         if [ ! -z "$INVALID" ]; then
           echo "❌ FAIL: Some commits don't start with doc:, chore:, or fix:"
           echo "$INVALID"
